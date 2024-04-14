@@ -18,16 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: black;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .gradient {
+    @apply bg-gradient-to-b from-white via-gray-300 to-gray-600;
+  }
+  .gradient-title {
+    @apply gradient text-transparent bg-clip-text;
   }
 }
